@@ -152,68 +152,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-my-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/06/my-first-blog/">my first blog</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/06/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-07-06T02:52:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/06/my-first-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -260,6 +198,119 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/07/06/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-02-16-基于Windows的TensorFlow-GPU环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/10/2018-02-16-基于Windows的TensorFlow-GPU环境搭建/">基于Windows的TensorFlow-GPU环境搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/10/2018-02-16-基于Windows的TensorFlow-GPU环境搭建/" class="archive-article-date">
+  	<time datetime="2018-02-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考<a href="https://www.tensorflow.org/install/install_windows?hl=zh-cn" target="_blank" rel="noopener">官方教程</a>，欢迎借鉴。</p>
+<hr>
+<p><strong><em>tensorflow1.5/CUDA 9.0/cuDNN 7.0</em></strong>      </p>
+<h2 id="注：tensorflow尚不支持CUDA9-1"><a href="#注：tensorflow尚不支持CUDA9-1" class="headerlink" title="注：tensorflow尚不支持CUDA9.1"></a>注：tensorflow尚不支持CUDA9.1</h2><h1 id="1-Anaconda-安装"><a href="#1-Anaconda-安装" class="headerlink" title="1.Anaconda 安装"></a>1.Anaconda 安装</h1><p>Anaconda是一种Python语言的免费增值开源发行版，用于进行大规模数据处理,预测分析, 和科学计算,致力于简化包的管理和部署。支持Linux、Windows、Mac系统，提供了包管理和环境管理的功能，可以很方便的解决Python各个环境的并存、切换和第三方包管理的功能，Anaconda使用软件包管理系统Conda进行包管理。具体的过程参考<a href="https://www.jianshu.com/p/2f3be7781451" target="_blank" rel="noopener">Anaconda使用</a>。<a href="https://www.anaconda.com/download/" target="_blank" rel="noopener">下载链接</a></p>
+<h1 id="2-CUDA-9-0-和-cuDNN7-0环境配置"><a href="#2-CUDA-9-0-和-cuDNN7-0环境配置" class="headerlink" title="2.CUDA 9.0 和 cuDNN7.0环境配置"></a>2.CUDA 9.0 和 cuDNN7.0环境配置</h1><p>在安装Tensorflow-GPU版本时，必须确保系统中已经安装好NVIDIA的软件CUDA和cuDNN，CUDA是在GPU上运行的一个并行计算的框架，cuDNN是深度神经网络的GPU加速库，在机器学习和深度学习中，可以加快计算的速度，且可以集成到更高级别的机器学习框架中。关于CUDA和cuDNN的具体介绍.<br><a href="http://blog.csdn.net/fangjin_kl/article/details/53906874" target="_blank" rel="noopener">CPU、GPU、CUDA，CuDNN简介</a>。安装TensorFlow-CPU版本不需要安装CUDA和cuDNN。</p>
+<p>大多数以往的教程通常是基于CUDA8.0和cuDNN6.0,而tensorflow1.5,已经支持CUDA9.0和cuDNN7.0，本教程就是基于此。在下载安装包时，可以去NVIDIA官网下载<a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">CUDA</a>,<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="noopener">cuDNN</a>,CUDA的安装类型选择本地（local），下载cuDNN时会需要登录NIVIDA开发者的账户，如果没有的话可以注册一个。需要注意的是：<strong><em>tensorflow1.5还不支持CUDA9.1</em></strong>，否则在安装Tensorflow-GPU时会报错（我在安装过程中遇到了这个问题）。</p>
+<ol>
+<li>CUDA安装过程中会有选择安装路径的选项，实际这个只是选择的临时的一个解压安装的路径，相当于是一个中转站，并不是真正的安装位置，安装结束后会自动删除，所以无需进行改变。实际的安装路径是默认的，无法更改（C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0）。</li>
+<li>cuDNN7.0解压之后有三个文件夹bin/include/lib，不需要进行安装，只需要将三个文件夹中对应的文件cudnn64_7.dll、cudnn.h、cudnn.lib，复制粘贴到CUDA的相应的安装路径下即可，例如cudnn64_7.dll复制到（C:\Program Files\NVIDIA GPU ComputingToolkit\CUDA\v9.0\bin），其余两个文件同理。</li>
+</ol>
+<h1 id="3-TensorFlow-GPU安装"><a href="#3-TensorFlow-GPU安装" class="headerlink" title="3.TensorFlow-GPU安装"></a>3.TensorFlow-GPU安装</h1><ol>
+<li>打开Anaconda Prompt，通过conda命令，在其中创建tensorflow环境。tensorflow是环境名，可以自由更改。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C：(D:\software\Anaconda3) C:\Users\sun&gt;conda create -n tensorflow pip python=3.5</span><br></pre></td></tr></table></figure>
+
+<p>在这里，我选择的Python版本是3.5版本</p>
+<ol start="2">
+<li>环境创建好之后通过命令激活切换至tensorflow环境<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C：(D:\software\Anaconda3) C:\Users\sun&gt;activate tensorflow</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>此时会切换到创建的tensorflow环境中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(tensorflow) C:\Users\sun&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>此时输入下面的命令在tensorflow环境中安装TensorFlow-GPU<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(tensorflow) C:\Users\sun&gt;pip install --ignore-installed --upgrade tensorflow-gpu</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>至此tensorflow-gpu安装完毕，通过窗口中的提示判断是否安装成功。</p>
+<h1 id="4-检验安装"><a href="#4-检验安装" class="headerlink" title="4.检验安装"></a>4.检验安装</h1><p>通过shell进入Python环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(tensorflow) C:\Users\sun&gt;Python</span><br></pre></td></tr></table></figure>
+
+<p>在shell依次输入下面的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt;hello=tf.constant(&apos;Hello,TensorFlow!&apos;)</span><br><span class="line">&gt;&gt;&gt;sess=tf.Session()</span><br><span class="line">&gt;&gt;&gt;print(sess.run(hello))</span><br></pre></td></tr></table></figure>
+
+<p>如果输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello，TensorFlow!</span><br></pre></td></tr></table></figure>
+
+<p>证明安装成功，就可以开始写TensorFlow程序啦。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tensorflow</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/10/2018-02-16-基于Windows的TensorFlow-GPU环境搭建/">展开全文 >></a>
         </p>
       
 
@@ -380,6 +431,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tensorflow</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
