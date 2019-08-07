@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考官方教程，欢迎借鉴。  tensorflow1.5/CUDA 9.0/cuDNN 7.0       注：tensorflow">
+<meta name="description" content="TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考官方教程，欢迎借鉴。  tensorflow1.5/CUDA 9.0/cuDNN 7.0">
 <meta name="keywords" content="tensorflow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Windows的TensorFlow-GPU环境搭建">
 <meta property="og:url" content="http://yoursite.com/2018/02/10/2018-02-16-基于Windows的TensorFlow-GPU环境搭建/index.html">
 <meta property="og:site_name" content="Seahawkk">
-<meta property="og:description" content="TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考官方教程，欢迎借鉴。  tensorflow1.5/CUDA 9.0/cuDNN 7.0       注：tensorflow">
+<meta property="og:description" content="TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考官方教程，欢迎借鉴。  tensorflow1.5/CUDA 9.0/cuDNN 7.0">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-06T15:19:33.714Z">
+<meta property="og:updated_time" content="2019-08-07T15:09:58.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Windows的TensorFlow-GPU环境搭建">
-<meta name="twitter:description" content="TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考官方教程，欢迎借鉴。  tensorflow1.5/CUDA 9.0/cuDNN 7.0       注：tensorflow">
+<meta name="twitter:description" content="TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考官方教程，欢迎借鉴。  tensorflow1.5/CUDA 9.0/cuDNN 7.0">
 
 
 
@@ -100,7 +100,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -161,7 +161,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">Don't Panic</p>
       
   </div>
 
@@ -187,6 +187,26 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
           </a>
         </li>
       
@@ -238,7 +258,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Seahawk">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/avatar/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -303,6 +323,8 @@
         <p>TensorFlow是由Google Brain研发的机器学习的开源软件库，可以运行在多个CPU和GPU上，tensorflow环境的搭建是ML初学者需要解决的第一个问题，本篇博客主要是分享自己是如何在Windows上配置tensorflow-gpu环境的。主要安装流程参考<a href="https://www.tensorflow.org/install/install_windows?hl=zh-cn" target="_blank" rel="noopener">官方教程</a>，欢迎借鉴。</p>
 <hr>
 <p><strong><em>tensorflow1.5/CUDA 9.0/cuDNN 7.0</em></strong>      </p>
+<a id="more"></a>
+
 <h2 id="注：tensorflow尚不支持CUDA9-1"><a href="#注：tensorflow尚不支持CUDA9-1" class="headerlink" title="注：tensorflow尚不支持CUDA9.1"></a>注：tensorflow尚不支持CUDA9.1</h2><h1 id="1-Anaconda-安装"><a href="#1-Anaconda-安装" class="headerlink" title="1.Anaconda 安装"></a>1.Anaconda 安装</h1><p>Anaconda是一种Python语言的免费增值开源发行版，用于进行大规模数据处理,预测分析, 和科学计算,致力于简化包的管理和部署。支持Linux、Windows、Mac系统，提供了包管理和环境管理的功能，可以很方便的解决Python各个环境的并存、切换和第三方包管理的功能，Anaconda使用软件包管理系统Conda进行包管理。具体的过程参考<a href="https://www.jianshu.com/p/2f3be7781451" target="_blank" rel="noopener">Anaconda使用</a>。<a href="https://www.anaconda.com/download/" target="_blank" rel="noopener">下载链接</a></p>
 <h1 id="2-CUDA-9-0-和-cuDNN7-0环境配置"><a href="#2-CUDA-9-0-和-cuDNN7-0环境配置" class="headerlink" title="2.CUDA 9.0 和 cuDNN7.0环境配置"></a>2.CUDA 9.0 和 cuDNN7.0环境配置</h1><p>在安装Tensorflow-GPU版本时，必须确保系统中已经安装好NVIDIA的软件CUDA和cuDNN，CUDA是在GPU上运行的一个并行计算的框架，cuDNN是深度神经网络的GPU加速库，在机器学习和深度学习中，可以加快计算的速度，且可以集成到更高级别的机器学习框架中。关于CUDA和cuDNN的具体介绍.<br><a href="http://blog.csdn.net/fangjin_kl/article/details/53906874" target="_blank" rel="noopener">CPU、GPU、CUDA，CuDNN简介</a>。安装TensorFlow-CPU版本不需要安装CUDA和cuDNN。</p>
 <p>大多数以往的教程通常是基于CUDA8.0和cuDNN6.0,而tensorflow1.5,已经支持CUDA9.0和cuDNN7.0，本教程就是基于此。在下载安装包时，可以去NVIDIA官网下载<a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">CUDA</a>,<a href="https://developer.nvidia.com/cudnn" target="_blank" rel="noopener">cuDNN</a>,CUDA的安装类型选择本地（local），下载cuDNN时会需要登录NIVIDA开发者的账户，如果没有的话可以注册一个。需要注意的是：<strong><em>tensorflow1.5还不支持CUDA9.1</em></strong>，否则在安装Tensorflow-GPU时会报错（我在安装过程中遇到了这个问题）。</p>
@@ -444,6 +466,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/avatar/avatar.jpg" alt="Seahawk">
+            
               <p class="site-author-name" itemprop="name">Seahawk</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -467,10 +491,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
@@ -520,6 +544,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -545,11 +576,7 @@
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -566,11 +593,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
